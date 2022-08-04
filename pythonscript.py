@@ -8,9 +8,12 @@ import os
 
 # Utilisez load_env pour tracer le chemin de .env:
 destination = os.environ.get("destinationimportcollab")
-
 data = pd.read_csv(destination + '\\' + sys.argv[1])
-print(data)
+
+
+dataFrame = pd.DataFrame.drop(labels='Username', axis=1)
+
+print(dataFrame)
 # df = pd.DataFrame({'team': ['A', 'A', 'A', 'A', 'B', 'B', 'B', 'B'],
 #                    'assists': [5, 7, 7, 9, 12, 9, 9, 4],
 #                    'points': [11, 8, 10, 6, 6, 5, 9, 12]})
